@@ -12,17 +12,12 @@ def showInfo():
     print(" 6.存储学生信息")
     print(" 7.退出系统")
     print('-' * 30)
-
-
 # 定义一个列表，用来存储多个学生的信息
 students = []
-
 while True:
-
     showInfo()
     # 提示用户选择功能
     key = int(input("请选择功能（序号）："))
-
     # 根据用户选择，完成相应功能
     if key == 1:
         print("您选择了添加学生信息功能")
@@ -32,7 +27,6 @@ while True:
         address = input("请输入学生地址：")
         time = input("请输入填报时间：")
         healthy = input("请输入健康状况：")
-
         # 验证学号是否唯一
         i = 0
         leap = 0
@@ -54,11 +48,9 @@ while True:
             stuInfo['address'] = address
             stuInfo['time'] = time
             stuInfo['healthy'] = healthy
-
             # 单个学生信息放入列表
             students.append(stuInfo)
             print("添加成功！")
-
     elif key == 2:
         print("您选择了删除学生功能")
         delId = input("请输入要删除的学生学号:")
@@ -76,8 +68,6 @@ while True:
         else:
             del students[i]
             print("删除成功！")
-
-
     elif key == 3:
         print("您选择了修改学生信息功能")
         alterId = input("请输入你要修改学生的学号:")
@@ -170,7 +160,6 @@ while True:
             for info in student_info:
                 students_txt.write(str(info) + "\n")  # 按行存储，添加换行符
             students_txt.close()
-
     elif key == 7:
         # 退出功能，尽量往不退出的方向引
         quitconfirm = input("真的要退出系统吗 （yes或者no）?")
